@@ -1,0 +1,119 @@
+:root {
+    --cell-size: 96px;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    background: #000;
+    font-size: 16px;
+  }
+  
+  .board-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+  }
+  
+  .cell {
+    position: relative;
+  }
+
+  
+  /* .board.arctic {
+    --map-tile-top-url: url('../img/map-tile-top.png');
+    --map-tile-top-left-url: url('../img/map-tile-top-left.png');
+    --map-tile-top-right-url: url('../img/map-tile-top-right.png');
+    --map-tile-bottom-left-url: url('../img/map-tile-bottom-left.png');
+    --map-tile-bottom-url: url('../img/map-tile-bottom.png');
+    --map-tile-bottom-right-url: url('../img/map-tile-bottom-right.png');
+    --map-tile-left-url: url('../img/map-tile-left.png');
+    --map-tile-right-url: url('../img/map-tile-right.png');
+    --map-tile-center-url: url('../img/map-tile-center.png');
+  } */
+  
+  .board.arctic {
+    --map-tile-top-url: url('../img/resized/map-tile-top.png');
+    --map-tile-top-left-url: url('../img/resized/map-tile-top-left.png');
+    --map-tile-top-right-url: url('../img/resized/map-tile-top-right.png');
+    --map-tile-bottom-left-url: url('../img/resized/map-tile-bottom-left.png');
+    --map-tile-bottom-url: url('../img/resized/map-tile-bottom.png');
+    --map-tile-bottom-right-url: url('../img/resized/map-tile-bottom-right.png');
+    --map-tile-left-url: url('../img/resized/map-tile-left.png');
+    --map-tile-right-url: url('../img/resized/map-tile-right.png');
+    --map-tile-center-url: url('../img/resized/map-tile-center.png');
+  }
+
+  .map-tile {
+    width: var(--cell-size);
+    height: var(--cell-size);
+  }
+  
+  .map-tile-top-left {
+    background: var(--map-tile-top-left-url);
+  }
+  
+  .map-tile-top {
+    background: var(--map-tile-top-url);
+  }
+  
+  .map-tile-top-right {
+    background: var(--map-tile-top-right-url);
+  }
+  
+  .map-tile-bottom-left {
+    background: var(--map-tile-bottom-left-url);
+  }
+  
+  .map-tile-bottom {
+    background: var(--map-tile-bottom-url);
+  }
+  
+  .map-tile-bottom-right {
+    background: var(--map-tile-bottom-right-url);
+  }
+  
+  .map-tile-left {
+    background: var(--map-tile-left-url);
+  }
+  
+  .map-tile-right {
+    background: var(--map-tile-right-url);
+  }
+  
+  .map-tile-center {
+    background: var(--map-tile-center-url);
+  }
+  
+  .character {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    position: absolute;
+    z-index: 99;
+    background: url('../img/resized/goblin.png');
+  }
+  
+  /* @keyframes fade {
+    from {
+      opacity: 0;
+      top: calc(var(--cell-size) * 0.5);
+      font-size: 1rem;
+    }
+    to {
+      opacity: 1;
+      top: -20px;
+      font-size: 1.5rem;
+    }
+  } */
+  
