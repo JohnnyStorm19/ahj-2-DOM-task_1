@@ -18,9 +18,9 @@ export default class GamePlay {
   start() {
     let count = 0;
     let intervalId = setInterval(() => {
-        this.addCharacter();
-        count++;
-        if (count > 10) clearInterval(intervalId);
+      this.addCharacter();
+      count++;
+      if (count > 10) clearInterval(intervalId);
     }, 2000);
   }
 
@@ -42,7 +42,7 @@ export default class GamePlay {
     this.boardEl = this.container.querySelector("[data-id=board]");
 
     this.boardEl.classList.add(theme);
-    for (let i = 0; i < this.boardSize ** 2; i += 1) {
+    for (let i = 0; i < Math.pow(this.boardSize, 2); i += 1) {
       const cellEl = document.createElement("div");
       cellEl.classList.add(
         "cell",
@@ -56,17 +56,17 @@ export default class GamePlay {
   }
 
   addCharacter() {
-    const oldCharEl = document.querySelector('.character');
+    const oldCharEl = document.querySelector(".character");
 
     if (oldCharEl) {
-        oldCharEl.remove();
+      oldCharEl.remove();
     }
 
     const randomNumber = Math.floor(Math.random() * this.cells.length);
-    const cellEl = this.boardEl.children[randomNumber];    
-    const charEl = document.createElement('div');
+    const cellEl = this.boardEl.children[randomNumber];
+    const charEl = document.createElement("div");
 
-    charEl.classList.add('character');
+    charEl.classList.add("character");
     cellEl.append(charEl);
   }
 }
